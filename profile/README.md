@@ -1,2 +1,2 @@
-<a href="https://github.com/search?q=user%3Apaion-data+label%3A%22HELP+WANTED%22+state%3Aopen&type=Issues&ref=advsearch&l=&l="><img align="right" src="https://img.shields.io/badge/We%20offer%20paid%20Contribution-129817?style=for-the-badge&logo=github&logoColor=white" /></a>
-<a href="https://status.paion-data.dev/"><img align="right" src="https://img.shields.io/badge/Service%20Status-1ABC9C?style=for-the-badge&logo=upptime&logoColor=white" /></a>
+[![Paion Service Status](https://img.shields.io/badge/Service%20Status-1ABC9C?style=for-the-badge&logo=upptime&logoColor=white)](https://status.paion-data.dev/)
+[![Paid Contribution](https://img.shields.io/badge/We%20offer%20paid%20Contribution-129817?style=for-the-badge&logo=github&logoColor=white)](https://github.com/search?q=user%3Apaion-data+label%3A%22HELP+WANTED%22+state%3Aopen&type=Issues&ref=advsearch&l=&l=)
