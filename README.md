@@ -33,113 +33,105 @@ git push origin <分支名>
 - `<commit message>` 可以是中英文（但给国际开源社区提交代码则必须是英文），主要描述一下这次提交的内容
 - `-S` 指定 GPG 签名，配置自己的 GPG 签名请参阅下文”创建并使用 GPG key 提交代码“
 
-#### 创建并使用 GPG key 提交代码
-
-GPG key 的作用是对自己的代码进行签名认证，向 GitHub 上的开发者证明某一段代码确实是你自己写的，提高代码在公司团队中的的安全性
-
-![gpg-verified-with-expired-key](https://github.com/user-attachments/assets/d12c64d5-58e2-4e6b-a8b4-bba99b1c993f)
-
-下文的 Answer 详细罗列如何在本地新建一个 GPG key，将其上传到自己的 GitHub 账号，并在提交代码的时候用其进行签名。
-
-##### 1. 新建 GPG key
-
-打开终端，执行
-
-```bash
-gpg --full-generate-key
-```
-
-- key size 必须是 **4096** bits
-- ***email 必须是 GitHub 注册邮箱***
-
-获取 GPG key ID：
-
-```bash
-gpg --list-secret-keys --keyid-format=long
-```
-
-得到如下结果
-
-```
-$ gpg --list-secret-keys --keyid-format=long
-/Users/hubot/.gnupg/secring.gpg
-------------------------------------
-sec   4096R/3AA5C34371567BD2 2016-03-10 [expires: 2017-03-10]
-uid                          Hubot <hubot@example.com>
-ssb   4096R/4BB6D45482678BE3 2016-03-10
-```
-
-在上面的栗子中， **GPG key ID 是 `3AA5C34371567BD2`**
-
-> 后续如果需要删除本地 GPG key 可使用
+> [!TIP]
+> 
+> __创建并使用 GPG key 提交代码__
+> 
+> GPG key 的作用是对自己的代码进行签名认证，向 GitHub 上的开发者证明某一段代码确实是你自己写的，提高代码在公司团队中的的安全性
+> 
+> ![gpg-verified-with-expired-key](https://github.com/user-attachments/assets/d12c64d5-58e2-4e6b-a8b4-bba99b1c993f)
+> 
+> 下文的 Answer 详细罗列如何在本地新建一个 GPG key，将其上传到自己的 GitHub 账号，并在提交代码的时候用其进行签名。
+> 
+> 1. 打开终端，执行
+> 
+>    ```bash
+>    gpg --full-generate-key
+>    ```
+> 
+>    - key size 必须是 **4096** bits
+>    - ***email 必须是 GitHub 注册邮箱***
+> 
+> 2. 获取 GPG key ID：
+> 
+>    ```bash
+>    gpg --list-secret-keys --keyid-format=long
+>    ```
+> 
+>    得到如下结果
+> 
+>    ```
+>    $ gpg --list-secret-keys --keyid-format=long
+>    /Users/hubot/.gnupg/secring.gpg
+>    ------------------------------------
+>    sec   4096R/3AA5C34371567BD2 2016-03-10 [expires: 2017-03-10]
+>    uid                          Hubot <hubot@example.com>
+>    ssb   4096R/4BB6D45482678BE3 2016-03-10
+>    ```
+> 
+>    在上面的栗子中， **GPG key ID 是 `3AA5C34371567BD2`**。后续如果需要删除本地 GPG key 可使用
+>    
+>    ```bash
+>    gpg --delete-secret-keys 3AA5C34371567BD2
+>    ```
+> 
+> 3. 配置 Git，在提交代码的时候自动使用这个 GPG key
+> 
+>    ```bash
+>    git config --global user.signingkey 3AA5C34371567BD2
+>    ```
+> 
+>    然后，将这个 ID 复制粘贴到如下指令中，得到 GPG key 的 ASCII armor 原文格式：
+> 
+>    ```bash
+>    gpg --armor --export 3AA5C34371567BD2
+>    ```
+> 
+> 4. 复制 GPG key（包含 `-----BEGIN PGP PUBLIC KEY BLOCK-----` 和 `-----END PGP PUBLIC KEY BLOCK-----` 以及中间的内容）
+> 5. 上传 GPG key 至 GitHub：请参照 [GitHub 官方文档](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-gpg-key-to-your-github-account)
+> 6. 使用 GPG key 提交代码。第一次提交代码之前，配置 Git 提交使用的邮箱：
+> 
+>    ```console
+>    git config --global user.email "your_email@abc.example"
+>    ```
 >
-> ```bash
-> gpg --delete-secret-keys 3AA5C34371567BD2
-> ```
-
-配置 Git，在提交代码的时候自动使用这个 GPG key
-
-```bash
-git config --global user.signingkey 3AA5C34371567BD2
-```
-
-然后，将这个 ID 复制粘贴到如下指令中，得到 GPG key 的 ASCII armor 原文格式：
-
-```bash
-gpg --armor --export 3AA5C34371567BD2
-```
-
-复制 GPG key（包含 `-----BEGIN PGP PUBLIC KEY BLOCK-----` 和 `-----END PGP PUBLIC KEY BLOCK-----` 以及中间的内容）
-
-##### 2. 上传 GPG key 至 GitHub
-
-请参照 [GitHub 官方文档](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-gpg-key-to-your-github-account)
-
-##### 3. 使用 GPG key 提交代码
-
-第一次提交代码之前，配置 Git 提交使用的邮箱：
-
-git config --global user.email "your_email@abc.example"
-
-- **`your_email@abc.example` 必须是 GitHub 注册邮箱**
-- 如果是首次使用 `git`，还需要执行 `git config --global user.name "<你的 github username>"`
-
-以后，**_所有的代码提交均使用这个指令格式_**
-
-```bash
-git commit -S -m "<commit message>"
-```
-
-- `-S` 代表使用 GPG key 进行签名
-- `<commit message>` 根据每次代码提交的内容确定
-
-##### Troubleshooting
-
-###### gpg: signing failed: Inappropriate ioctl for device
-
-如果在 Mac 操作系统下 commit 遇到 **gpg: signing failed: Inappropriate ioctl for device** 的报错，请[先执行](https://github.com/keybase/keybase-issues/issues/2798#issue-205008630)
-
-```bash
-export GPG_TTY=$(tty)
-```
-
-再重新运行 `git commit -S -m "<commit message>"` 即可
-
-###### Commit 之时，出现“Git commit failed : Couldn't load public key”
-
-在 Windows 上使用 Gpg4Win 的时候出现
-
-```console
-error: Couldn't load public key 632EA751459C3A1A: No such file or directory?
-
-fatal: failed to write commit object
-```
-
-[解决方法](https://stackoverflow.com/questions/73726815/git-commit-failed-couldnt-load-public-key#comment135267740_73816112)：执行
-
-```console
-git config --global --unset gpg.format
-```
+>    - **`your_email@abc.example` 必须是 GitHub 注册邮箱**
+>    - 如果是首次使用 `git`，还需要执行 `git config --global user.name "<你的 github username>"`
+> 
+> 7. 正式提交代码：
+> 
+>    ```bash
+>    git commit -S -m "<commit message>"
+>    ```
+> 
+>    - `-S` 代表使用 GPG key 进行签名
+>    - `<commit message>` 根据每次代码提交的内容确定
+> 
+> __Troubleshooting__
+> 
+> - ❌ `gpg: signing failed: Inappropriate ioctl for device`：✅ 如果在 Mac 操作系统下 commit 遇到
+>   **gpg: signing failed: Inappropriate ioctl for device** 的报错，
+>   [先执行](https://github.com/keybase/keybase-issues/issues/2798#issue-205008630)
+> 
+>   ```bash
+>   export GPG_TTY=$(tty)
+>   ```
+> 
+>   再重新运行 `git commit -S -m "<commit message>"` 即可
+> 
+> - ❌ Commit 之时，出现 `Git commit failed : Couldn't load public key`：✅ 在 Windows 上使用 Gpg4Win 的时候出现
+> 
+>   ```console
+>   error: Couldn't load public key 632EA751459C3A1A: No such file or directory?
+> 
+>   fatal: failed to write commit object
+>   ```
+> 
+>   [执行](https://stackoverflow.com/questions/73726815/git-commit-failed-couldnt-load-public-key#comment135267740_73816112)
+> 
+>   ```console
+>   git config --global --unset gpg.format
+>   ```
 
 ### [新建 Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request#creating-the-pull-request)
 
