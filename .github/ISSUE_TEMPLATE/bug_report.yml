@@ -1,0 +1,53 @@
+name: Bug Report
+description: Submit a bug report to help us improve
+title: 'Bug Report: '
+labels:
+  - BUG
+projects:
+  - Paion Data Task Tracking
+
+body:
+  - type: checkboxes
+    id: preliminary-checks
+    attributes:
+      label: 📝 Preliminary Checks
+      description: |
+        By submitting this issue, you agree to our [Code of Conduct](https://github.com/paion-data/.github/blob/master/CODE_OF_CONDUCT.md).
+      options:
+        - label: I tried searching for an existing issue but still need assistance.
+          required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 👀 What Happened?
+      description: How did this differ from your expectations?
+      placeholder: Although `LOG_LEVEL=debug` is set, the logs are missing debug output.
+    validations:
+      required: true
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: 👟 Reproduction Steps
+      description: |
+        How did you trigger this bug? Please walk us through it step by step.
+        Please use [fenced code blocks](https://docs.github.com/en/github/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#fenced-code-blocks) when pasting lots of text!
+      placeholder: The easier it is for us to reproduce your issue, the sooner we can help resolve it 😉
+  - type: input
+    id: operating-system
+    attributes:
+      label: 💻 Operating System and Architecture
+      description: |
+        Which OS is your docker host running on?
+        **NOTE:** Windows and macOS have limited support.
+      placeholder: Debian 11 (Bullseye) x86_64, Fedora 38 ARM64
+    validations:
+      required: true
+  - type: textarea
+    id: relevant-log-output
+    attributes:
+      label: 📜 Relevant log output
+      description: |
+        Show us relevant log output here.
+        - Please make no sensible information has been masked out before submitting them
+        - This field expects only plain text (_rendered as a fenced code block_).
+      render: Text

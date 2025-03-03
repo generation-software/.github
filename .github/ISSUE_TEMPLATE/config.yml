@@ -1,0 +1,12 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: Company Landing Page
+    url: https://paion-data.com
+    about: Read this page for information on Paion Data in general.
+  - name: Service Status
+    url: https://status.paion-data.dev/
+    about: Please check this out if any of our online services is not operating in expectation.
+  - name: Code of Conducts
+    url: https://github.com/paion-data/.github/blob/master/CODE_OF_CONDUCT.md
+    about: Read this page for information about Paion Data's code of conduct.
