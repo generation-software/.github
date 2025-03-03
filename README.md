@@ -11,7 +11,7 @@ Paion Data Community Health Files
 <!-- TOC -->
 
 代码开发流程
-----------
+------------
 
 无论是开发一项新功能还是修一个 bug，都要以 pull request 的形式提交代码，并且通过审核之后，才能合并到 `master` 主线分支
 
@@ -141,6 +141,51 @@ git push origin <分支名>
 >   ```console
 >   git config --global --unset gpg.format
 >   ```
+> - 如何对历史 commit 进行 GPG 签名
+> 
+>   - __对最近一次提交进行签名__：输入
+>
+>     ```
+>     git commit -S --amend
+>     ```
+>     
+>     会进入一个编辑界面，我们可以调整 commit message，或者不调整，直接保存退出，之后就完成了对上一次 commit 的签名
+>
+>   - __对过去 n 次提交进行签名__：比如 `git log` 显示
+>
+>     ```console
+>     commit y9Gn4
+>     Author: A-Little-Excited <166267528+A-Little-Excited@users.noreply.github.com>
+>     Date:   Mon Apr 8 16:23:12 2024 +0800
+>     
+>          上一次提交
+>     
+>     commit AtrFB
+>     Author: A-Little-Excited <166267528+A-Little-Excited@users.noreply.github.com>
+>     Date:   Mon Apr 8 14:37:47 2024 +0800
+>     
+>         上上一次提交
+>     
+>     commit C7j2c
+>     Author: Jiaqi Liu <jack20220723@gmail.com>
+>     Date:   Mon Apr 8 09:49:52 2024 +0800
+>     
+>         上上上一次提交
+>     
+>     commit Drd8p (HEAD -> master, origin/master, origin/HEAD)
+>     Author: Jiaqi Liu <jack20220723@gmail.com>
+>     Date:   Mon Apr 8 09:48:39 2024 +0800
+>     
+>         master 分支提交 (#16)
+>     ```
+>
+>     如果我们发现 `上一次提交`，`上上一次提交`，`上上上一次提交` 都需要重新签名，可以用
+>
+>     ```console
+>     git rebase --exec 'git commit --amend --no-edit -n -S' -i Drd8p
+>     ```
+>     
+>     注意上面指令的最后是 `上上上一次提交` 的再上一次提交的 commit hash，即 `Drd8p`   
 
 ### [新建 Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request#creating-the-pull-request)
 
