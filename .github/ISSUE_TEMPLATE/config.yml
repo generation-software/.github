@@ -1,7 +1,7 @@
 blank_issues_enabled: false
 
 contact_links:
-  - name: Community Discussion
+  - name: Community Discussions
     url: https://github.com/paion-data/.github/discussions
     about: Check out this page for browsing conversations, asking questions, and posting answers without opening issues.
   - name: Company Landing Page
