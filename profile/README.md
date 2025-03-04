@@ -6,3 +6,4 @@
 ### Team's [Knowledge Hub](https://github.com/orgs/paion-data/repositories?q=topic%3Adocumentation)
 
 - [git](https://git.paion-data.dev/)
+- [Jest](https://jest.paion-data.dev/)
