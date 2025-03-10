@@ -15,7 +15,7 @@ Natural Language Processing
 - [Tiger](https://huggingface.co/spaces/paion-data/tiger)
 - [Aristotle](https://huggingface.co/spaces/paion-data/aristotle)
 
-Make For Our Team - Paion Data [Tech Knowledge Hub](https://github.com/orgs/paion-data/repositories?q=topic%3Adocumentation)
+Made For Our Team - Paion Data [Tech Knowledge Hub](https://github.com/orgs/paion-data/repositories?q=topic%3Adocumentation)
 ---------------------------------------------------
 
 - [git](https://git.paion-data.dev/)
