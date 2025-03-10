@@ -23,7 +23,7 @@ Made For Our Team
 ### Project Generators
 
 - [Fast UI](https://fastui.paion-data.com/)
-- [Fast WS](https://fastspring.paion-data.com/)
+- [Fast Spring](https://fastspring.paion-data.com/)
 
 ### Paion Data [Tech Knowledge Hub](https://github.com/orgs/paion-data/repositories?q=topic%3Adocumentation)
 
