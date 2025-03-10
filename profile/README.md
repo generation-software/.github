@@ -6,6 +6,8 @@
 Natural Language Processing
 ---------------------------
 
+- [Chatbot WS](https://chatbot.qubitpi.org/)
+
 ### Hugging Face Datasets
 
 - [Wiktionary Data](https://huggingface.co/datasets/paion-data/wiktionary-data)
@@ -15,8 +17,17 @@ Natural Language Processing
 - [Tiger](https://huggingface.co/spaces/paion-data/tiger)
 - [Aristotle](https://huggingface.co/spaces/paion-data/aristotle)
 
-Made For Our Team - Paion Data [Tech Knowledge Hub](https://github.com/orgs/paion-data/repositories?q=topic%3Adocumentation)
----------------------------------------------------
+Made For Our Team
+-----------------
+
+Project Generators
+------------------
+
+- [Fast UI](https://fastui.paion-data.com/)
+- [Fast WS](https://fastspring.paion-data.com/)
+
+Paion Data [Tech Knowledge Hub](https://github.com/orgs/paion-data/repositories?q=topic%3Adocumentation)
+-------------------------------
 
 - [git](https://git.paion-data.dev/)
 - [Testcontainers for Java](http://testcontainers-java.paion-data.dev/)
