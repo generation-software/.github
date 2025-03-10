@@ -30,4 +30,4 @@ Made For Our Team
 - [git](https://git.paion-data.dev/)
 - [Testcontainers for Java](http://testcontainers-java.paion-data.dev/)
 - [Jest](https://jest.paion-data.dev/)
-- [Paion-Data 团队代码开发流程](https://github.com/paion-data/.github/wiki/Paion-Data-团队代码开发流程)
+- [Paion Data 团队代码开发流程](https://github.com/paion-data/.github/wiki/Paion-Data-团队代码开发流程)
