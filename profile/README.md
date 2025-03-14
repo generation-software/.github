@@ -17,19 +17,8 @@ Natural Language Processing
 - [Tiger](https://huggingface.co/spaces/paion-data/tiger)
 - [Aristotle](https://huggingface.co/spaces/paion-data/aristotle)
 
-Made For Our Team
------------------
-
-### Project Generators
+Project Generators
+------------------
 
 - [Fast UI](https://fastui.paion-data.com/)
 - [Fast Spring](https://fastspring.paion-data.com/)
-
-### Paion Data [Tech Knowledge Hub](https://github.com/orgs/paion-data/repositories?q=topic%3Adocumentation)
-
-
-- https://hub.docker.com/u/paiondatahub
-- [git](https://git.paion-data.dev/)
-- [Testcontainers for Java](http://testcontainers-java.paion-data.dev/)
-- [Jest](https://jest.paion-data.dev/)
-- [Paion Data 团队代码开发流程](https://github.com/paion-data/.github/wiki/Paion-Data-团队代码开发流程)
