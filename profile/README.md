@@ -6,7 +6,7 @@
 Natural Language Processing
 ---------------------------
 
-- [Chatbot WS](https://chatbot.paion-data.com//)
+- [Chatbot WS](https://chatbot.paion-data.com/)
 
 ### Hugging Face Datasets
 
