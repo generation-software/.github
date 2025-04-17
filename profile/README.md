@@ -15,7 +15,7 @@ Natural Language Processing
 ### Hugging Face Spaces
 
 - [Tiger](https://huggingface.co/spaces/paion-data/tiger)
-- [Aristotle](https://huggingface.co/spaces/paion-data/aristotle)
+- [Pantex](https://huggingface.co/spaces/paion-data/pantex)
 
 Project Generators
 ------------------
