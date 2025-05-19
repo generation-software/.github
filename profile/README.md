@@ -8,6 +8,7 @@ Paion Data Software Engineering Standards
 ![Node Version Badge]
 ![Java Version Badge][Java Version Badge]
 [![Docker Hub][Docker Hub Badge]][Docker Hub URL]
+[![GitHub Workflow Status][GitHub Workflow Status Badge]][GitHub Workflow Status URL]
 [![Apache License Badge]][Apache License, Version 2.0]
 
 - Programming Frameworks
@@ -35,6 +36,9 @@ Paion Data Software Engineering Standards
 
 [Docker Hub Badge]: https://img.shields.io/badge/paiondatahub-2596EC.svg?style=for-the-badge&logo=docker&logoColor=white
 [Docker Hub URL]: https://hub.docker.com/r/paiondatahub/
+
+[GitHub Workflow Status Badge]: https://img.shields.io/github/actions/workflow/status/paion-data/.github/ci-cd.yaml?branch=master&logo=github&style=for-the-badge&label=GitHub%20Actions&labelColor=%232088FF
+[GitHub Workflow Status URL]: https://github.com/paion-data/.github/actions/workflows/ci-cd.yaml
 
 [Node Version Badge]: https://img.shields.io/badge/NODE-22-339933?logo=Node.js&logoColor=white&labelColor=66cc33&style=for-the-badge
 
