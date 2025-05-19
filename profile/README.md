@@ -38,7 +38,7 @@ Paion Data Software Engineering Standards
 [Docker Hub URL]: https://hub.docker.com/r/paiondatahub/
 
 [GitHub Workflow Status Badge]: https://img.shields.io/github/actions/workflow/status/paion-data/.github/ci-cd.yaml?branch=master&logo=github&style=for-the-badge&label=GitHub%20Actions&labelColor=%232088FF
-[GitHub Workflow Status URL]: https://github.com/paion-data/.github/actions/workflows/ci-cd.yaml
+[GitHub Workflow Status URL]: https://github.com/organizations/paion-data/settings/actions/hosted-runners
 
 [Node Version Badge]: https://img.shields.io/badge/NODE-22-339933?logo=Node.js&logoColor=white&labelColor=66cc33&style=for-the-badge
 
