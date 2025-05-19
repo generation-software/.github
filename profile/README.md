@@ -10,6 +10,8 @@ Paion Data Software Engineering Standards
 [![Docker Hub][Docker Hub Badge]][Docker Hub URL]
 [![GitHub Workflow Status][GitHub Workflow Status Badge]][GitHub Workflow Status URL]
 [![Apache License Badge]][Apache License, Version 2.0]
+[![](https://img.shields.io/github/issues-search?query=user%3Apaion-data+state%3Aopen+type%3Aissue+archived%3Afalse&style=for-the-badge&logo=github&logoColor=white&label=Open%20Source%20Tasks&labelColor=181717&color=181717)](https://github.com/orgs/paion-data/projects/12/views/1)
+[![](https://img.shields.io/badge/Service%20Status-1ABC9C?style=for-the-badge&logo=upptime&logoColor=white)](https://status.paion-data.dev/)
 
 - Programming Frameworks
 
