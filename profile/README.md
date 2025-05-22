@@ -16,7 +16,7 @@ Paion Data Software Engineering Standards
 - Programming Frameworks
 
   - [Chatbot Webservice template](https://chatbot.paion-data.com/)
-  - [Java Persistence API (JPA) Webservice template](https://entity-ws.paion-data.dev/)
+  - [Java Persistence API (JPA) Webservice template](https://kugelblitz.paion-data.dev/)
   - [React App scaffolding](https://fastui.paion-data.com/)
 
 - Docker Containers
