@@ -37,7 +37,7 @@ jobs:
       github-token: ${{ secrets.GITHUB_TOKEN }}
 
   yml-md-style-and-link-checks:
-    uses: ./.github/workflows/yml-md-style-and-link-checks.yaml
+    uses: ./.github/workflows/yml-md-style-checks.yaml
 
   test-upversion:
     name: Test upversion.py

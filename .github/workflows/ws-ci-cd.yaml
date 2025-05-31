@@ -17,12 +17,6 @@ name: Java Webservice CI/CD
 "on":
   workflow_call:
     inputs:
-      use-custom-lycheeignore-file:
-        description: |
-          Whether or not to use custome .lycheeignore file located at the root of downstream project. Default to "false"
-        type: boolean
-        required: false
-        default: false
       cname:
         description: 'The CNAME of the React app deployed to GitHub Pages'
         required: false
@@ -59,9 +53,7 @@ jobs:
 
   yml-md-style-and-link-checks:
     needs: pre-commit
-    uses: paion-data/.github/.github/workflows/yml-md-style-and-link-checks.yaml@master
-    with:
-      use-custom-lycheeignore-file: ${{ inputs.use-custom-lycheeignore-file }}
+    uses: paion-data/.github/.github/workflows/yml-md-style-checks.yaml@master
 
   tests:
     name: Unit & Integration Tests
