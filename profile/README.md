@@ -31,8 +31,8 @@ Paion Data Software Engineering Standards
 
 - Backend
 
-  - [Maven project checkstyle config file](../checkstyle.xml)
-  - [IntellJ code style config file](../Paion-Data-WS-Project-intellij-code-style.xml)
+  - [Maven project checkstyle config file](../maven/checkstyle.xml)
+  - [IntellJ code style config file](../intellij/Paion-Data-WS-Project-intellij-code-style.xml)
 
 [Apache License Badge]: https://img.shields.io/badge/Apache%202.0-F25910.svg?style=for-the-badge&logo=Apache&logoColor=white
 [Apache License, Version 2.0]: https://www.apache.org/licenses/LICENSE-2.0
