@@ -32,13 +32,6 @@ env:
   NODE_VERSION: 22
 
 jobs:
-  cancel-previous:
-    permissions:
-      actions: write
-    uses: paion-data/.github/.github/workflows/cancel-previous-run.yaml@master
-    secrets:
-      github-token: ${{ secrets.github-token }}
-
   pre-commit:
     uses: paion-data/.github/.github/workflows/pre-commit-checks.yaml@master
     with:
