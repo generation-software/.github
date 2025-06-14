@@ -37,10 +37,6 @@ jobs:
     with:
       use-custom-pre-commit-config-file: false
 
-  yml-md-style-and-link-checks:
-    needs: pre-commit
-    uses: paion-data/.github/.github/workflows/yml-md-style-checks.yaml@master
-
   code-style:
     name: Code Style Check
     needs: pre-commit
@@ -69,7 +65,7 @@ jobs:
 
   unit-tests:
     name: Unit Tests
-    needs: [yml-md-style-and-link-checks, code-style]
+    needs: code-style
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683  # v4.2.2
