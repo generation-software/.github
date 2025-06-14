@@ -46,6 +46,7 @@ jobs:
 
   tests:
     name: Unit & Integration Tests
+    needs: pre-commit
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
