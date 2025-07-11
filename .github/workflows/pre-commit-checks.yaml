@@ -1,4 +1,4 @@
-# Copyright 2025 Paion Data. All rights reserved.
+# Copyright 2025 Jiaqi Liu. All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -37,7 +37,7 @@ jobs:
           persist-credentials: false
       - name: Load custom config files if specified
         if: ${{ !inputs.use-custom-pre-commit-config-file }}
-        run: wget https://raw.githubusercontent.com/paion-data/.github/master/.github/pre-commit/.pre-commit-config.yaml
+        run: wget https://raw.githubusercontent.com/generation-software/.github/master/.github/pre-commit/.pre-commit-config.yaml
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065  # v5.6.0
         with:
           python-version: "3.x"

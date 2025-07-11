@@ -2,11 +2,8 @@ blank_issues_enabled: false
 
 contact_links:
   - name: Community Discussions
-    url: https://github.com/paion-data/.github/discussions
+    url: https://github.com/generation-software/.github/discussions
     about: Check out this page for browsing conversations, asking questions, and posting answers without opening issues.
-  - name: Service Status
-    url: https://status.paion-data.dev/
-    about: Follow this page if any of our online services is not operating in expectation.
-  - name: Company Landing Page
-    url: https://paion-data.com
-    about: Read this page for information on Paion Data in general.
+  - name: Open Source Community
+    url: https://github.com/generation-software
+    about: Read this page for information on Generation Software open source in general.

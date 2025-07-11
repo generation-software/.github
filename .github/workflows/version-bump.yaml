@@ -1,4 +1,4 @@
-# Copyright 2025 Paion Data. All rights reserved.
+# Copyright 2025 Jiaqi Liu. All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -36,7 +36,7 @@ jobs:
           fetch-depth: 0
       - name: Download auto-version bump scripts
         run: |
-          git clone https://github.com/paion-data/.github.git ../.github
+          git clone https://github.com/generation-software/.github.git ../.github
           cp ../.github/.github/version-bump/tag-for-release.bash .github/
           cp ../.github/.github/version-bump/upversion.py .github/
       - name: Tag for release

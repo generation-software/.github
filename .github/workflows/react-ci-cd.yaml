@@ -1,4 +1,4 @@
-# Copyright 2025 Paion Data. All rights reserved.
+# Copyright 2025 Jiaqi Liu. All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -33,7 +33,7 @@ env:
 
 jobs:
   pre-commit:
-    uses: paion-data/.github/.github/workflows/pre-commit-checks.yaml@master
+    uses: generation-software/.github/.github/workflows/pre-commit-checks.yaml@master
     with:
       use-custom-pre-commit-config-file: false
 
@@ -240,6 +240,6 @@ jobs:
           github_token: ${{ secrets.github-token }}
           publish_dir: dist
           enable_jekyll: false
-          user_name: paion-data-bot
-          user_email: bot@paion-data.dev
+          user_name: QubitPi
+          user_email: jack20220723@gmail.com
           cname: ${{ inputs.cname }}

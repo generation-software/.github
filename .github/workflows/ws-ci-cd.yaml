@@ -1,4 +1,4 @@
-# Copyright 2025 Paion Data. All rights reserved.
+# Copyright 2025 Jiaqi Liu. All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -40,7 +40,7 @@ env:
 
 jobs:
   pre-commit:
-    uses: paion-data/.github/.github/workflows/pre-commit-checks.yaml@master
+    uses: generation-software/.github/.github/workflows/pre-commit-checks.yaml@master
     with:
       use-custom-pre-commit-config-file: false
 
@@ -89,7 +89,7 @@ jobs:
         if: ${{ github.ref == 'refs/heads/master' && !github.event.repository.private }}
         uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772  # v3.4.0
         with:
-          username: paiondatahub
+          username: jack20191124
           password: ${{ secrets.dockerhub-token }}
       - name: Push image to DockerHub
         if: ${{ github.ref == 'refs/heads/master' && !github.event.repository.private }}
@@ -97,14 +97,14 @@ jobs:
         with:
           context: .
           push: true
-          tags: paiondatahub/${{ inputs.docker-image-name }}:latest
+          tags: jack20191124/${{ inputs.docker-image-name }}:latest
       - name: Push image Description
         if: ${{ github.ref == 'refs/heads/master' && !github.event.repository.private }}
         uses: peter-evans/dockerhub-description@432a30c9e07499fd01da9f8a49f0faf9e0ca5b77  # v4.0.2
         with:
-          username: paiondatahub
+          username: jack20191124
           password: ${{ secrets.dockerhub-token }}
-          repository: paiondatahub/${{ inputs.docker-image-name }}
+          repository: jack20191124/${{ inputs.docker-image-name }}
           readme-filepath: README.md
 
   documentation:
@@ -139,19 +139,19 @@ jobs:
         run: |
           cd ${{ github.workspace }}/docs/src/css
           rm font.css
-          curl -O -L https://raw.githubusercontent.com/paion-data/.github/refs/heads/master/.github/docusaurus/font.css
+          curl -O -L https://raw.githubusercontent.com/generation-software/.github/refs/heads/master/.github/docusaurus/font.css
 
           cd ${{ github.workspace }}/docs/static/fonts
           rm -rf *
           mkdir Poppins
           cd Poppins
-          curl -O -L https://github.com/paion-data/.github/raw/refs/heads/master/.github/fonts/Poppins/Poppins-Regular.ttf
-          curl -O -L https://github.com/paion-data/.github/raw/refs/heads/master/.github/fonts/Poppins/Poppins-Bold.ttf
+          curl -O -L https://github.com/generation-software/.github/raw/refs/heads/master/.github/fonts/Poppins/Poppins-Regular.ttf
+          curl -O -L https://github.com/generation-software/.github/raw/refs/heads/master/.github/fonts/Poppins/Poppins-Bold.ttf
 
           cd ${{ github.workspace }}/docs/static/fonts
           mkdir Ubuntu
           cd Ubuntu
-          curl -O -L https://github.com/paion-data/.github/raw/refs/heads/master/.github/fonts/Ubuntu/UbuntuMono-Regular.ttf
+          curl -O -L https://github.com/generation-software/.github/raw/refs/heads/master/.github/fonts/Ubuntu/UbuntuMono-Regular.ttf
       - name: Build documentation
         working-directory: docs
         run: yarn build
@@ -166,6 +166,6 @@ jobs:
           github_token: ${{ secrets.github-token }}
           publish_dir: docs/build
           enable_jekyll: false
-          user_name: paion-data-bot
-          user_email: bot@paion-data.dev
+          user_name: QubitPi
+          user_email: jack20220723@gmail.com
           cname: ${{ inputs.cname }}
